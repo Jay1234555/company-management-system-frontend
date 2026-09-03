@@ -1,0 +1,315 @@
+
+.admin-services {
+    min-height: 70vh;
+    padding: 50px 7%;
+    background: #f4f7f6;
+}
+
+
+/* ================= HEADER ================= */
+
+.admin-services-header {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+}
+
+.admin-services-header h1 {
+    margin-bottom: 8px;
+    color: #1f2937;
+    font-size: 36px;
+}
+
+.admin-services-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+
+/* ================= FORM ================= */
+
+.service-form {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f6f5c;
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.form-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+.save-button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1f6f5c;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: #155444;
+}
+
+.cancel-button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #6b7280;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #4b5563;
+}
+
+
+/* ================= SERVICE LIST ================= */
+
+.services-list {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.services-list h2 {
+    margin-bottom: 25px;
+
+    color: #1f2937;
+}
+
+
+/* Grid */
+
+.admin-service-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Card */
+
+.admin-service-card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.admin-service-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image */
+
+.admin-service-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Content */
+
+.admin-service-content {
+    padding: 25px;
+}
+
+.admin-service-content h3 {
+    margin-bottom: 12px;
+
+    color: #1f2937;
+}
+
+.admin-service-content p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+
+/* Actions */
+
+.admin-service-actions {
+    display: flex;
+
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.edit-button {
+    background: #1f6f5c;
+}
+
+.edit-button:hover {
+    background: #155444;
+}
+
+.delete-button {
+    background: #dc2626;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+
+/* No services */
+
+.no-services {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    color: #6b7280;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .admin-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .admin-services {
+        padding: 35px 20px;
+    }
+
+    .admin-services-header h1 {
+        font-size: 30px;
+    }
+
+    .service-form {
+        padding: 20px;
+    }
+
+    .admin-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,161 @@
+
+.navbar {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+.navbar-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.navbar-logo {
+    text-decoration: none;
+
+    color: #1f6f5c;
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+
+/* Links */
+
+.navbar-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.navbar-links a {
+    text-decoration: none;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.navbar-links a:hover {
+    color: #1f6f5c;
+}
+
+
+/* Login */
+
+.navbar-login {
+    padding: 9px 17px;
+
+    border-radius: 6px;
+
+    background: #1f6f5c;
+
+    color: white !important;
+}
+
+
+.navbar-login:hover {
+    background: #155444;
+
+    color: white !important;
+}
+
+
+/* Logout */
+
+.navbar-logout {
+    padding: 9px 17px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.navbar-logout:hover {
+    background: #b91c1c;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .navbar-container {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .navbar-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .navbar-container {
+        padding: 15px 20px;
+    }
+
+    .navbar-logo {
+        font-size: 23px;
+    }
+
+    .navbar-links {
+        gap: 10px;
+    }
+
+    .navbar-links a,
+    .navbar-login,
+    .navbar-logout {
+        font-size: 13px;
+    }
+
+}

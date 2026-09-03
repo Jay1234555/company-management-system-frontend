@@ -1,0 +1,175 @@
+
+.dashboard-page {
+    min-height: 70vh;
+
+    padding: 50px 7%;
+
+    background: #f4f7f6;
+}
+
+
+/* Header */
+
+.dashboard-header {
+    max-width: 1200px;
+
+    margin: 0 auto 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 8px;
+
+    color: #1f2937;
+
+    font-size: 36px;
+}
+
+.dashboard-header p {
+    margin: 0;
+
+    color: #6b7280;
+}
+
+
+/* Logout */
+
+.logout-button {
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #dc2626;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Cards */
+
+.dashboard-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.dashboard-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Icon */
+
+.card-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.dashboard-card h2 {
+    color: #1f2937;
+
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    color: #6b7280;
+
+    margin-bottom: 20px;
+}
+
+
+/* Card Button */
+
+.dashboard-card button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1f6f5c;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.dashboard-card button:hover {
+    background: #155444;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .dashboard-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .dashboard-page {
+        padding: 35px 20px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-container {
+        grid-template-columns: 1fr;
+    }
+
+}

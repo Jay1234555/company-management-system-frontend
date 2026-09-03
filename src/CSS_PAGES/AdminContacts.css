@@ -1,0 +1,167 @@
+
+.admin-contacts {
+    min-height: 70vh;
+
+    padding: 50px 5%;
+
+    background: #f4f7f6;
+}
+
+
+/* Header */
+
+.admin-contacts-header {
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+}
+
+.admin-contacts-header h1 {
+    margin-bottom: 8px;
+
+    color: #1f2937;
+
+    font-size: 36px;
+}
+
+.admin-contacts-header p {
+    margin: 0;
+
+    color: #6b7280;
+}
+
+
+/* Container */
+
+.contacts-container {
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* Table Wrapper */
+
+.contact-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Table */
+
+.contact-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 1000px;
+}
+
+
+/* Table Header */
+
+.contact-table th {
+    padding: 15px;
+
+    background: #1f6f5c;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+
+/* Table Cells */
+
+.contact-table td {
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #374151;
+
+    vertical-align: top;
+
+    font-size: 14px;
+}
+
+
+/* Hover */
+
+.contact-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+
+/* Message */
+
+.message-cell {
+    max-width: 300px;
+
+    line-height: 1.5;
+}
+
+
+/* Delete */
+
+.delete-contact-button {
+    padding: 8px 14px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #dc2626;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.delete-contact-button:hover {
+    background: #b91c1c;
+}
+
+
+/* Empty */
+
+.no-contacts {
+    padding: 50px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .admin-contacts {
+        padding: 35px 15px;
+    }
+
+    .admin-contacts-header h1 {
+        font-size: 30px;
+    }
+
+}

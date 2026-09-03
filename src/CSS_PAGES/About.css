@@ -1,0 +1,151 @@
+
+.about-page {
+    min-height: 70vh;
+    background-color: #f8fafc;
+}
+
+
+/* Header */
+.about-header {
+    text-align: center;
+    padding: 70px 10% 50px;
+}
+
+.about-header h1 {
+    font-size: 42px;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+
+/* Who We Are */
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px 70px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 30px;
+    color: #1f2937;
+    margin-bottom: 25px;
+}
+
+.about-content p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+
+/* Achievements */
+.achievements-section {
+    padding: 60px 10% 80px;
+    background-color: white;
+    text-align: center;
+}
+
+.achievements-section h2 {
+    font-size: 32px;
+    color: #1f2937;
+    margin-bottom: 40px;
+}
+
+
+/* Achievement Grid */
+.achievements-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* Achievement Card */
+.achievement-card {
+    padding: 30px;
+    background-color: #f8fafc;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.achievement-card h3 {
+    font-size: 21px;
+    color: #1f2937;
+    margin-bottom: 15px;
+}
+
+.achievement-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+
+/* Loading / Error */
+.loading,
+.error,
+.no-achievements {
+    font-size: 18px;
+}
+
+.loading,
+.no-achievements {
+    color: #6b7280;
+}
+
+.error {
+    color: #dc2626;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .achievements-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .about-header {
+        padding: 50px 20px 35px;
+    }
+
+    .about-header h1 {
+        font-size: 32px;
+    }
+
+    .about-content {
+        padding-bottom: 50px;
+    }
+
+    .achievements-section {
+        padding: 50px 20px 60px;
+    }
+
+    .achievements-container {
+        grid-template-columns: 1fr;
+    }
+}

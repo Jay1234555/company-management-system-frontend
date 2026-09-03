@@ -1,0 +1,163 @@
+
+.services-page {
+    min-height: 70vh;
+    background-color: #f8fafc;
+}
+
+
+/* Header */
+.services-header {
+    text-align: center;
+    padding: 70px 10% 50px;
+}
+
+.services-header h1 {
+    font-size: 42px;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+.services-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+
+/* Services Container */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    padding: 40px 10% 80px;
+}
+
+
+/* Service Card */
+.service-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Service Image */
+.service-image {
+    width: 100%;
+    height: 210px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Service Content */
+.service-content {
+    padding: 25px;
+}
+
+.service-content h2 {
+    font-size: 22px;
+    color: #1f2937;
+
+    margin-bottom: 15px;
+}
+
+.service-content p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* Loading */
+.loading {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+
+/* Error */
+.error {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #dc2626;
+}
+
+
+/* No Services */
+.no-services {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .services-header {
+        padding: 50px 20px 35px;
+    }
+
+    .services-header h1 {
+        font-size: 32px;
+    }
+
+    .services-header p {
+        font-size: 16px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+
+        padding: 30px 20px 60px;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+}

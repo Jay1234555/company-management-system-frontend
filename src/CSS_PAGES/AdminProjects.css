@@ -1,0 +1,321 @@
+
+.admin-projects {
+    min-height: 70vh;
+    padding: 50px 7%;
+    background: #f4f7f6;
+}
+
+
+/* Header */
+
+.admin-projects-header {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+}
+
+.admin-projects-header h1 {
+    margin-bottom: 8px;
+    color: #1f2937;
+    font-size: 36px;
+}
+
+.admin-projects-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+
+/* Form */
+
+.project-form {
+    max-width: 1100px;
+    margin: 0 auto 60px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #374151;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 6px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1f6f5c;
+}
+
+.form-group textarea {
+    min-height: 130px;
+
+    resize: vertical;
+}
+
+
+/* Buttons */
+
+.form-buttons {
+    display: flex;
+
+    gap: 12px;
+}
+
+.save-button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #1f6f5c;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: #155444;
+}
+
+.cancel-button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #6b7280;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #4b5563;
+}
+
+
+/* Project List */
+
+.projects-list {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.projects-list h2 {
+    margin-bottom: 25px;
+
+    color: #1f2937;
+}
+
+
+/* Grid */
+
+.admin-project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Card */
+
+.admin-project-card {
+    background: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.admin-project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Image */
+
+.admin-project-card img {
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Content */
+
+.admin-project-content {
+    padding: 25px;
+}
+
+.admin-project-content h3 {
+    margin-bottom: 12px;
+
+    color: #1f2937;
+}
+
+.admin-project-content p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.admin-project-content strong {
+    color: #374151;
+}
+
+
+/* Actions */
+
+.admin-project-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.edit-button,
+.delete-button {
+    flex: 1;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.edit-button {
+    background: #1f6f5c;
+}
+
+.edit-button:hover {
+    background: #155444;
+}
+
+.delete-button {
+    background: #dc2626;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+
+/* No Projects */
+
+.no-projects {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    color: #6b7280;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+    .admin-project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .admin-projects {
+        padding: 35px 20px;
+    }
+
+    .admin-projects-header h1 {
+        font-size: 30px;
+    }
+
+    .project-form {
+        padding: 20px;
+    }
+
+    .admin-project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .save-button,
+    .cancel-button {
+        width: 100%;
+    }
+
+}
