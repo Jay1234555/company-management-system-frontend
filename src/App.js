@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
@@ -20,8 +18,6 @@ import AdminAchievements from "./pages/AdminAchievements";
 import AdminContacts from "./pages/AdminContacts";
 import PrivateRoute from "./pages/PrivateRoute";
 import Groups from "./pages/Groups";
-
-import PrivateRoute from "./pages/PrivateRoute";
 
 
 function App() {
