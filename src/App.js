@@ -28,8 +28,6 @@ function App() {
 
             <Routes>
 
-                {/* ================= PUBLIC ================= */}
-
                 <Route
                     path="/"
                     element={<Home />}
@@ -60,11 +58,6 @@ function App() {
                     element={<Login />}
                 />
 
-
-                {/* ================= ADMIN ================= */}
-
-                {/* Dashboard */}
-
                 <Route
                     path="/dashboard"
                     element={
@@ -75,9 +68,6 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-
-
-                {/* Admin Services */}
 
                 <Route
                     path="/admin/services"
@@ -90,9 +80,6 @@ function App() {
                     }
                 />
 
-
-                {/* Admin Projects */}
-
                 <Route
                     path="/admin/projects"
                     element={
@@ -103,9 +90,6 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-
-
-                {/* Admin Achievements */}
 
                 <Route
                     path="/admin/achievements"
@@ -118,9 +102,6 @@ function App() {
                     }
                 />
 
-
-                {/* Admin Contacts */}
-
                 <Route
                     path="/admin/contacts"
                     element={
@@ -131,9 +112,6 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-
-
-                {/* Admin Groups */}
 
                 <Route
                     path="/admin/groups"
