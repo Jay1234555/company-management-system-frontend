@@ -1,4 +1,6 @@
 
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../services/api";
@@ -9,6 +11,7 @@ function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+    const [loginType, setLoginType] = useState("USER");
 
     const navigate = useNavigate();
 
@@ -17,8 +20,8 @@ function Login() {
 
         e.preventDefault();
 
-        setError("");
-
+        setError("")
+        
 
         try {
 
@@ -30,29 +33,39 @@ function Login() {
                 }
             );
 
+            if (
+                loginType === "ADMIN" &&
+                response.data.role !== "ADMIN"
+            ) {
 
-            console.log(
-                "Login successful:",
-                response.data
-            );
+                setError("This account is not an Admin account.");
 
+                return;
+            }
 
-            // Save complete user information
+            if (
+                loginType === "USER" &&
+                response.data.role === "ADMIN"
+            ) {
+
+                setError("Please switch to Admin Login.");
+
+                return;
+            }
+
             localStorage.setItem(
                 "user",
                 JSON.stringify(response.data)
             );
-
-
-            // Check user role
+            
             if (response.data.role === "ADMIN") {
 
-                // Admin → Dashboard
+
                 navigate("/dashboard");
 
             } else {
 
-                // Normal User → Home
+
                 navigate("/");
 
             }
@@ -60,11 +73,7 @@ function Login() {
 
         } catch (error) {
 
-            console.error(
-                "Login error:",
-                error
-            );
-
+            console.error("Login error:", error);
 
             if (error.response) {
 
@@ -76,9 +85,7 @@ function Login() {
 
             } else {
 
-                setError(
-                    "Cannot connect to server"
-                );
+                setError("Cannot connect to server");
 
             }
 
@@ -92,12 +99,51 @@ function Login() {
 
             <div className="login-card">
 
-                <h1>Login</h1>
+                <h1>
+                    {loginType === "ADMIN"
+                        ? "Admin Login"
+                        : "User Login"}
+                </h1>
 
                 <p className="login-subtitle">
-                    Login to your account
+                    {loginType === "ADMIN"
+                        ? "Login to Admin Dashboard"
+                        : "Login to your account"}
                 </p>
 
+                <div className="login-switch">
+
+                    <button
+                        type="button"
+                        className={
+                            loginType === "USER"
+                                ? "switch-button active"
+                                : "switch-button"
+                        }
+                        onClick={() => {
+                            setLoginType("USER");
+                            setError("");
+                        }}
+                    >
+                        User
+                    </button>
+
+                    <button
+                        type="button"
+                        className={
+                            loginType === "ADMIN"
+                                ? "switch-button admin-active"
+                                : "switch-button"
+                        }
+                        onClick={() => {
+                            setLoginType("ADMIN");
+                            setError("");
+                        }}
+                    >
+                        Admin
+                    </button>
+
+                </div>
 
                 {error && (
                     <div className="login-error">
@@ -147,7 +193,9 @@ function Login() {
                         type="submit"
                         className="login-button"
                     >
-                        Login
+                        {loginType === "ADMIN"
+                            ? "Login as Admin"
+                            : "Login as User"}
                     </button>
 
 
