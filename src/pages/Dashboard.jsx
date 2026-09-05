@@ -134,6 +134,14 @@ function Dashboard() {
 
                 </div>
 
+                <div className="dashboard-card"> 
+                    <div className="card-icon"> 👥 </div> 
+                    <h2>Groups</h2> <p> Manage customer groups. </p> 
+                <Link to="/admin/groups">
+                 <button> Manage Groups </button> 
+                 </Link> 
+                 </div>
+
             </div>
 
         </div>

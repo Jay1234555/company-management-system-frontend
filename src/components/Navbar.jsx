@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
              <Link to="/services">Services</Link>
               <Link to="/projects">Projects</Link>
                <Link to="/contact">Contact</Link>
-                {/* Login */} {!user && ( <Link to="/login" className="navbar-login" > Login </Link> )} 
+             {!user && ( <Link to="/login" className="navbar-login" > Login </Link> )} 
                 </div> 
                 </div>
                  </nav> ); }
