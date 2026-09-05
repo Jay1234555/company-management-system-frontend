@@ -1,25 +1,26 @@
 
+/* ==============================
+   NAVBAR
+   ============================== */
+
 .navbar {
     width: 100%;
 
     background: #ffffff;
 
     border-bottom: 1px solid #e5e7eb;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 900;
 }
 
+/* Navbar Container */
 
 .navbar-container {
     max-width: 1200px;
 
     margin: auto;
-
-    padding: 18px 30px;
+    padding: 15px 30px;
 
     display: flex;
 
@@ -28,27 +29,26 @@
     justify-content: space-between;
 }
 
-
-/* Logo */
+/* ==============================
+   LOGO
+   ============================== */
 
 .navbar-logo {
     text-decoration: none;
-
-    color: #1f6f5c;
-
-    font-size: 26px;
-
+    color: #1f2937;
+    font-size: 25px;
     font-weight: bold;
 }
 
-
-/* Links */
+/* ==============================
+   NAVIGATION LINKS
+   ============================== */
 
 .navbar-links {
     display: flex;
-
+  
     align-items: center;
-
+   
     gap: 25px;
 }
 
@@ -57,72 +57,43 @@
     text-decoration: none;
 
     color: #374151;
-
-    font-size: 15px;
-
+    font-size: 16px;
     font-weight: 500;
-
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 
 .navbar-links a:hover {
-    color: #1f6f5c;
+    color: #007bff;
 }
 
-
-/* Login */
+/* ==============================
+   LOGIN BUTTON
+   ============================== */
 
 .navbar-login {
-    padding: 9px 17px;
+    background: #007bff;
+    color: white !important;
 
+    padding: 9px 18px;
     border-radius: 6px;
 
-    background: #1f6f5c;
-
-    color: white !important;
+    transition: 0.3s ease;
 }
 
 
 .navbar-login:hover {
-    background: #155444;
-
-    color: white !important;
+    background: #0056b3;
 }
 
+/* ==============================
+   RESPONSIVE
+   ============================== */
 
-/* Logout */
-
-.navbar-logout {
-    padding: 9px 17px;
-
-    border: none;
-
-    border-radius: 6px;
-
-    background: #dc2626;
-
-    color: white;
-
-    font-size: 14px;
-
-    cursor: pointer;
-}
-
-
-.navbar-logout:hover {
-    background: #b91c1c;
-}
-
-
-/* Tablet */
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
 
     .navbar-container {
-        flex-direction: column;
-
-        gap: 15px;
+        padding: 15px 20px;
     }
 
     .navbar-links {
@@ -133,6 +104,9 @@
         gap: 15px;
     }
 
+    .navbar-links a {
+        font-size: 14px;
+    }
 }
 
 
@@ -141,21 +115,14 @@
 @media (max-width: 600px) {
 
     .navbar-container {
-        padding: 15px 20px;
-    }
-
-    .navbar-logo {
-        font-size: 23px;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .navbar-links {
-        gap: 10px;
-    }
-
-    .navbar-links a,
-    .navbar-login,
-    .navbar-logout {
-        font-size: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
 }
