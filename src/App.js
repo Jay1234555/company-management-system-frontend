@@ -18,6 +18,7 @@ import AdminProjects from "./pages/AdminProjects";
 import AdminAchievements from "./pages/AdminAchievements";
 import AdminContacts from "./pages/AdminContacts";
 import PrivateRoute from "./pages/PrivateRoute";
+import Groups from "./pages/Groups";
 
 
 function App() {
@@ -105,6 +106,15 @@ function App() {
                     element={
                         <PrivateRoute>
                             <AdminContacts />
+                        </PrivateRoute>
+                    }
+                />
+
+                <Route
+                    path="/admin/groups"
+                    element={
+                        <PrivateRoute>
+                            <Groups />
                         </PrivateRoute>
                     }
                 />
