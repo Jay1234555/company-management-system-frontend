@@ -1,10 +1,10 @@
 
-import React from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import AdminLayout from "./components/AdminLayout";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+
 import Dashboard from "./pages/Dashboard";
 import AdminServices from "./pages/AdminServices";
 import AdminProjects from "./pages/AdminProjects";
@@ -19,6 +20,8 @@ import AdminAchievements from "./pages/AdminAchievements";
 import AdminContacts from "./pages/AdminContacts";
 import PrivateRoute from "./pages/PrivateRoute";
 import Groups from "./pages/Groups";
+
+import PrivateRoute from "./pages/PrivateRoute";
 
 
 function App() {
@@ -65,56 +68,85 @@ function App() {
 
                 {/* ================= ADMIN ================= */}
 
+                {/* Dashboard */}
+
                 <Route
                     path="/dashboard"
                     element={
                         <PrivateRoute>
-                            <Dashboard />
+                            <AdminLayout>
+                                <Dashboard />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
+
+
+                {/* Admin Services */}
 
                 <Route
                     path="/admin/services"
                     element={
                         <PrivateRoute>
-                            <AdminServices />
+                            <AdminLayout>
+                                <AdminServices />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
+
+
+                {/* Admin Projects */}
 
                 <Route
                     path="/admin/projects"
                     element={
                         <PrivateRoute>
-                            <AdminProjects />
+                            <AdminLayout>
+                                <AdminProjects />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
+
+
+                {/* Admin Achievements */}
 
                 <Route
                     path="/admin/achievements"
                     element={
                         <PrivateRoute>
-                            <AdminAchievements />
+                            <AdminLayout>
+                                <AdminAchievements />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
+
+
+                {/* Admin Contacts */}
 
                 <Route
                     path="/admin/contacts"
                     element={
                         <PrivateRoute>
-                            <AdminContacts />
+                            <AdminLayout>
+                                <AdminContacts />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
+
+
+                {/* Admin Groups */}
 
                 <Route
                     path="/admin/groups"
                     element={
                         <PrivateRoute>
-                            <Groups />
+                            <AdminLayout>
+                                <Groups />
+                            </AdminLayout>
                         </PrivateRoute>
                     }
                 />
