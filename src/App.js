@@ -18,7 +18,7 @@ import AdminAchievements from "./pages/AdminAchievements";
 import AdminContacts from "./pages/AdminContacts";
 import PrivateRoute from "./pages/PrivateRoute";
 import Groups from "./pages/Groups";
-
+import Register from "./pages/Register";
 
 function App() {
 
@@ -60,6 +60,10 @@ function App() {
                     path="/login"
                     element={<Login />}
                 />
+                <Route
+    path="/register"
+    element={<Register />}
+/>
 
 
                 {/* ================= ADMIN ================= */}

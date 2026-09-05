@@ -49,12 +49,21 @@ function Navbar() {
                     </Link>
 
                     {!user && (
-                        <Link
-                            to="/login"
-                            className="navbar-login"
-                        >
-                            Login
-                        </Link>
+                        <>
+                            <Link
+                                to="/login"
+                                className="navbar-login"
+                            >
+                                Login
+                            </Link>
+
+                            <Link
+                                to="/register"
+                                className="navbar-register"
+                            >
+                                Register
+                            </Link>
+                        </>
                     )}
 
                     {user && user.role === "ADMIN" && (

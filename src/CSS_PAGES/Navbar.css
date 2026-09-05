@@ -127,4 +127,19 @@
         padding: 7px 11px;
         font-size: 13px;
     }
+
+    .navbar-register {
+    padding: 9px 18px;
+    background: #28a745;
+    color: white !important;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar-register:hover {
+    background: #218838;
+}
+
 }
