@@ -124,16 +124,18 @@ function App() {
                         </PrivateRoute>
                     }
                 />
-                <Route
-                    path="/admin/chain-management"
-                    element={
-                        <PrivateRoute>
-                            <AdminLayout>
-                                <ChainManagement />
-                            </AdminLayout>
-                        </PrivateRoute>
-                    }
-                />
+                {/* Chain Management */}
+
+<Route
+    path="/admin/chains"
+    element={
+        <PrivateRoute>
+            <AdminLayout>
+                <ChainManagement />
+            </AdminLayout>
+        </PrivateRoute>
+    }
+/>
 
             </Routes>
 

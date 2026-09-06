@@ -134,13 +134,50 @@ function Dashboard() {
 
                 </div>
 
-                <div className="dashboard-card"> 
-                    <div className="card-icon"> 👥 </div> 
-                    <h2>Groups</h2> <p> Manage customer groups. </p> 
-                <Link to="/admin/groups">
-                 <button> Manage Groups </button> 
-                 </Link> 
-                 </div>
+               {/* Groups */}
+
+<div className="dashboard-card">
+
+    <div className="card-icon">
+        👥
+    </div>
+
+    <h2>Groups</h2>
+
+    <p>
+        Manage customer groups.
+    </p>
+
+    <Link to="/admin/groups">
+        <button>
+            Manage Groups
+        </button>
+    </Link>
+
+</div>
+
+
+{/* Chains */}
+
+<div className="dashboard-card">
+
+    <div className="card-icon">
+        🔗
+    </div>
+
+    <h2>Chains</h2>
+
+    <p>
+        Manage company chains.
+    </p>
+
+    <Link to="/admin/chains">
+        <button>
+            Manage Chains
+        </button>
+    </Link>
+
+</div>
 
             </div>
 
