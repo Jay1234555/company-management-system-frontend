@@ -18,6 +18,7 @@ import AdminAchievements from "./pages/AdminAchievements";
 import AdminContacts from "./pages/AdminContacts";
 import PrivateRoute from "./pages/PrivateRoute";
 import Groups from "./pages/Groups";
+import ChainManagement from "./pages/ChainManagement";
 
 function App() {
 
@@ -119,6 +120,16 @@ function App() {
                         <PrivateRoute>
                             <AdminLayout>
                                 <Groups />
+                            </AdminLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/admin/chain-management"
+                    element={
+                        <PrivateRoute>
+                            <AdminLayout>
+                                <ChainManagement />
                             </AdminLayout>
                         </PrivateRoute>
                     }
